@@ -6,21 +6,22 @@ import Rain from "./helper/Rain";
 
 const RainyWeather = () => {
   const cloudData = [
-    { id: 1, left: 10, top: 2, duration: "30s" },
-    { id: 2, left: 40, top: 24, duration: "25s" },
-    { id: 3, left: 70, top: 6, duration: "27s" },
+    { id: 1, left: 10, top: 2 },
+    { id: 2, left: 22, top: 24 },
+    { id: 3, left: 70, top: 6 },
+    { id: 3, left: 50, top: 10 },
+    { id: 3, left: 100, top: 16 },
   ];
 
   return (
     <>
-      {cloudData.map(({ id, left, top, duration }) => (
+      {cloudData.map(({ id, left, top }) => (
         <div
           key={id}
           className="cloud-container"
           style={{
             left: `${left}%`,
             top: `${top}%`,
-            animationDuration: duration,
           }}
         >
           <img src="src/assets/cloud-1.png" className="cloud-img" />

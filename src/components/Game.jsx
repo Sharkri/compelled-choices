@@ -55,48 +55,50 @@ const Game = () => {
   }
 
   return (
-    <div className="container">
-      <div className="game-container">
-        <div className="compassion-info">
-          <span>Compassion Meter: {state.compassion}</span>
-          <div className="compassion-meter">
-            <div
-              className="compassion-fill"
-              style={{ width: `${state.compassion}%` }}
-            />
-          </div>
-        </div>
-        <div className="scenario">
-          <p className="scenario-description">{scenario.description}</p>
-          <div className="choices">
-            {scenario.choices.map((choice, index) => (
-              <div key={index}>
-                <button
-                  onClick={() => handleChoice(choice)}
-                  className="choice-btn"
-                  disabled={
-                    selectedChoice && selectedChoice?.text !== choice.text
-                  }
-                >
-                  {choice.text}
-                </button>
-                {selectedChoice?.text === choice.text && (
-                  <blockquote>{selectedChoice.verse}</blockquote>
-                )}
-              </div>
-            ))}
-          </div>
-          {selectedChoice && (
-            <div>
-              <button onClick={handleContinue} className="continue-btn">
-                Continue
-              </button>
+    <>
+      <div className="container">
+        <div className="game-container">
+          <div className="compassion-info">
+            <span>Compassion Meter: {state.compassion}</span>
+            <div className="compassion-meter">
+              <div
+                className="compassion-fill"
+                style={{ width: `${state.compassion}%` }}
+              />
             </div>
-          )}
+          </div>
+          <div className="scenario">
+            <p className="scenario-description">{scenario.description}</p>
+            <div className="choices">
+              {scenario.choices.map((choice, index) => (
+                <div key={index}>
+                  <button
+                    onClick={() => handleChoice(choice)}
+                    className="choice-btn"
+                    disabled={
+                      selectedChoice && selectedChoice?.text !== choice.text
+                    }
+                  >
+                    {choice.text}
+                  </button>
+                  {selectedChoice?.text === choice.text && (
+                    <blockquote>{selectedChoice.verse}</blockquote>
+                  )}
+                </div>
+              ))}
+            </div>
+            {selectedChoice && (
+              <div>
+                <button onClick={handleContinue} className="continue-btn">
+                  Continue
+                </button>
+              </div>
+            )}
+          </div>
         </div>
-        {weather === "rain" ? <RainyWeather /> : <SunnyWeather />}
       </div>
-    </div>
+      {weather === "rain" ? <RainyWeather /> : <SunnyWeather />}
+    </>
   );
 };
 
