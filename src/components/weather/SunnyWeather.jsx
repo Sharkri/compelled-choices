@@ -1,6 +1,6 @@
 import React from "react";
 import sun from "/src/assets/pixel-art-sun.png";
-import "/src/css/SunnyEffect.css";
+import "/src/css/SunnyWeather.css";
 
 const SunnyWeather = () => {
   return (
