@@ -1,0 +1,24 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  transition: background-color 0.5s;
+  background: #2b2727;
+}
+body.rain {
+  background: #2b2727;
+  color: white;
+}
+body.cloudy {
+  background: #7a7a7a;
+  color: white;
+}
+body.sunny {
+  background: white;
+  color: black;
+}
+
+button {
+  cursor: pointer;
+}

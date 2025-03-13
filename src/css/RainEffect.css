@@ -1,0 +1,31 @@
+.moon-img {
+  position: fixed;
+  top: 2%;
+  right: 0%;
+  height: 80px;
+  filter: blur(8px); /* Softens the look */
+  opacity: 0.8; /* Makes it blend better */
+  animation: moveClouds 30s linear infinite;
+  pointer-events: none;
+}
+
+.moon-img[data-id="2"] {
+  right: 24%;
+  top: 22%;
+}
+
+.moon-img[data-id="3"] {
+  right: 48%;
+}
+
+@keyframes moveClouds {
+  from {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}

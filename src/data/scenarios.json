@@ -1,0 +1,121 @@
+{
+  "scenarios": [
+    {
+      "id": 1,
+      "description": "You see a homeless person shivering outside a grocery store. Your wallet has $10. What do you do?",
+      "choices": [
+        {
+          "text": "🍔 Buy them a warm meal",
+          "compassionChange": 15,
+          "nextScenarioId": 2,
+          "verse": "Romans 15:2 - 'Carry each other’s burdens.'"
+        },
+        {
+          "text": "🏃‍♂️👟💨 Walk away quietly",
+          "compassionChange": -5,
+          "nextScenarioId": 3,
+          "verse": "1 John 3:17 - 'If anyone has material possessions and sees a brother in need but has no pity...'"
+        },
+        {
+          "text": "🤣😂🗣 Mock their situation",
+          "compassionChange": -20,
+          "nextScenarioId": 4,
+          "verse": "Proverbs 14:21 - 'Whoever despises his neighbor is a sinner.'"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "description": "The person thanks you tearfully. Later, you’re short on rent. A friend offers loan shark contacts. What now?",
+      "choices": [
+        {
+          "text": "Decline and trust God",
+          "compassionChange": 10,
+          "nextScenarioId": 5,
+          "verse": "Matthew 6:26 - 'Look at the birds of the air... your Heavenly Father feeds them.'"
+        },
+        {
+          "text": "Accept the shady loan",
+          "compassionChange": -15,
+          "nextScenarioId": 4,
+          "verse": "Proverbs 22:7 - 'The borrower is slave to the lender.'"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "description": "You walk away but feel uneasy. At church, someone asks for volunteers at a soup kitchen. How do you respond?",
+      "choices": [
+        {
+          "text": "Sign up immediately",
+          "compassionChange": 20,
+          "nextScenarioId": 5,
+          "verse": "Hebrews 13:16 - 'Do not neglect to do good and to share what you have.'"
+        },
+        {
+          "text": "Make an excuse",
+          "compassionChange": -10,
+          "nextScenarioId": 4,
+          "verse": "James 2:15-16 - 'If a brother is poorly clothed... what good is that?'"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "description": "You’ve been avoiding opportunities to serve. A coworker confides they’re suicidal. What do you do?",
+      "choices": [
+        {
+          "text": "Listen and pray with them",
+          "compassionChange": 25,
+          "nextScenarioId": 5,
+          "verse": "Galatians 6:2 - 'Carry each other’s burdens.'"
+        },
+        {
+          "text": "Tell them you’re busy",
+          "compassionChange": -30,
+          "nextScenarioId": 6,
+          "verse": "Proverbs 24:11 - 'Rescue those being led away to death.'"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "description": "Your compassion has grown! A persecuted believer asks you to hide them. Do you risk your safety?",
+      "choices": [
+        {
+          "text": "Take them in",
+          "compassionChange": 40,
+          "nextScenarioId": null,
+          "verse": "Matthew 25:35 - 'I was a stranger and you invited me in.'"
+        },
+        {
+          "text": "Report them to authorities",
+          "compassionChange": -50,
+          "nextScenarioId": null,
+          "verse": "John 15:13 - 'Greater love has no one than this: to lay down one’s life for friends.'"
+        }
+      ]
+    }
+  ],
+
+  "endings": [
+    {
+      "minCompassion": 80,
+      "title": "Faithful Servant",
+      "message": "'Well done, good and faithful servant!' (Matthew 25:23)",
+      "verse": "2 Corinthians 5:14 - 'For Christ’s love compels us...'"
+    },
+    {
+      "minCompassion": 40,
+      "title": "Growing Disciple",
+      "message": "'Press on toward the goal!' (Philippians 3:14)",
+      "verse": "1 John 4:19 - 'We love because He first loved us.'"
+    },
+    {
+      "minCompassion": 0,
+      "title": "Broken Vessel",
+      "message": "'Return to me, and I will restore you.' (Jeremiah 15:19)",
+      "verse": "Lamentations 3:22-23 - 'His mercies are new every morning.'"
+    }
+  ]
+}
