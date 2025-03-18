@@ -51,3 +51,16 @@
     visibility: visible;
   }
 }
+
+@keyframes fadeRain {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+body:not(.rain) .rain-container {
+  animation: fadeRain 2s forwards;
+}

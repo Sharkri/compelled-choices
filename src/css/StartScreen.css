@@ -1,0 +1,61 @@
+.opening-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: "Serif", sans-serif;
+  padding: 20px;
+}
+
+.opening-container .fade-text {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+.opening-container .fade-text.hidden {
+  opacity: 0;
+}
+
+.continue-button.hidden,
+.skip-button.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.continue-button,
+.skip-button {
+  opacity: 1;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background: transparent;
+  color: rgb(230, 230, 230);
+  border: 1px solid rgb(77, 77, 77);
+  transition: all 0.5s ease;
+  border-radius: 8px;
+}
+
+.continue-button:hover,
+.skip-button:hover {
+  background: rgb(216, 216, 216);
+  color: black;
+}
+
+.skip-button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 1rem;
+  animation: appear 3s;
+}
+
+@keyframes appear {
+  0%,
+  50% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}

@@ -3,4 +3,18 @@
   top: 2%;
   right: 0%;
   height: 150px;
+  filter: blur(3px);
+  opacity: 1;
+}
+
+@keyframes skyChange {
+  0% {
+    background: linear-gradient(to bottom, #222, #555);
+  }
+  50% {
+    background: linear-gradient(to bottom, #4a90e2, #87ceeb);
+  }
+  100% {
+    background: linear-gradient(to bottom, #ffecb3, #87ceeb);
+  }
 }

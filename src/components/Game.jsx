@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import scenariosData from "../data/scenarios.json";
-import RainyWeather from "./weather/RainyWeather";
-import SunnyWeather from "./weather/SunnyWeather";
+import BackgroundMood from "./weather/BackgroundMood";
 
 const { scenarios, endings } = scenariosData;
 
@@ -29,7 +28,7 @@ const Game = () => {
 
   let weather = "sunny";
   if (state.compassion < 30) weather = "rain";
-  else if (state.compassion < 60) weather = "cloudy";
+  else if (state.compassion < 80) weather = "cloudy";
 
   useEffect(() => {
     document.body.className = weather;
@@ -71,7 +70,7 @@ const Game = () => {
             <p className="scenario-description">{scenario.description}</p>
             <div className="choices">
               {scenario.choices.map((choice, index) => (
-                <div key={index}>
+                <div key={`choice-${index}`}>
                   <button
                     onClick={() => handleChoice(choice)}
                     className="choice-btn"
@@ -97,7 +96,7 @@ const Game = () => {
           </div>
         </div>
       </div>
-      {weather === "rain" ? <RainyWeather /> : <SunnyWeather />}
+      <BackgroundMood weather={weather} />
     </>
   );
 };

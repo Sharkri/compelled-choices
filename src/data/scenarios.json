@@ -2,7 +2,7 @@
   "scenarios": [
     {
       "id": 1,
-      "description": "You see a homeless person shivering outside a grocery store. Your wallet has $10. What do you do?",
+      "description": "I see a homeless man on the sidewalk, shivering in the rain. He looks up, his eyes full of desperation. What should I do?",
       "choices": [
         {
           "text": "🍔 Buy them a warm meal",

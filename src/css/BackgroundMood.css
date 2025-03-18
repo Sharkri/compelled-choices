@@ -1,0 +1,38 @@
+.cloud-container {
+  position: fixed;
+  height: 80px;
+  pointer-events: none;
+  display: flex; /* Ensures children move with it */
+  flex-direction: column; /* Stack cloud and rain */
+  align-items: center; /* Centers them properly */
+  transition: filter 2s;
+  z-index: -1;
+}
+
+.cloud-container .cloud-img {
+  filter: blur(8px); /* Softens the look */
+  opacity: 0.8; /* Makes it blend better */
+}
+
+body.rain .cloud-container {
+  filter: grayscale(100%);
+}
+body.cloudy .cloud-container {
+  filter: grayscale(50%);
+}
+
+@keyframes cloudTransition {
+  0% {
+    filter: blur(8px);
+  }
+  50% {
+    filter: blur(5px) brightness(1);
+  }
+  100% {
+    filter: blur(3px) brightness(2);
+  }
+}
+
+body:not(.rain) .cloud-img {
+  animation: cloudTransition 2s ease-in-out forwards;
+}
