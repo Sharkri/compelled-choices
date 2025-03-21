@@ -6,6 +6,7 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+  margin-top: 48px;
 }
 
 .scenario-description {
@@ -24,6 +25,8 @@
   border: none;
   border-radius: 5px;
   transition: background-color 0.3s;
+  max-width: 600px;
+  font-weight: bold;
 }
 .choice-btn:hover {
   background-color: #45a049;
@@ -33,22 +36,6 @@
   cursor: not-allowed;
 }
 
-/* .compassion-info span { */
-/* } */
-
-.compassion-meter {
-  background: rgba(255, 215, 0, 0.1);
-  height: 10px;
-  border-radius: 5px;
-  margin: 20px 0;
-}
-
-.compassion-fill {
-  background: linear-gradient(to right, #ffd700, #ff6b6b);
-  height: 100%;
-  border-radius: 5px;
-  transition: width 0.5s ease;
-}
 .verse-modal {
   background: rgba(255, 255, 255, 0.95);
   padding: 20px;
@@ -68,10 +55,6 @@
 
 .continue-btn:hover {
   background: #2980b9;
-}
-
-blockquote {
-  font-style: italic;
 }
 
 textarea {
@@ -94,4 +77,39 @@ label {
 .compel-wrapper {
   display: flex;
   flex-direction: column;
+}
+
+.feedback-message {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 6px 24px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+  color: #f8f0e3;
+  text-align: center;
+  top: 0;
+  margin-top: 16px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 1000;
+}
+
+.feedback-message.visible {
+  opacity: 1;
+}
+
+.compassion-meter {
+  background: rgba(255, 215, 0, 0.1);
+  height: 10px;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+
+.compassion-fill {
+  background: linear-gradient(to right, #ffd700, #ff6b6b);
+  height: 100%;
+  border-radius: 5px;
+  transition: width 0.5s ease;
 }

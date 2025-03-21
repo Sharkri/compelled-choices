@@ -1,98 +1,204 @@
 {
   "scenarios": [
     {
-      "id": 1,
-      "description": "I see a homeless man on the sidewalk, shivering in the rain. He looks up, his eyes full of desperation. What should I do?",
+      "id": 0,
+      "description": "While walking to class, you see someone unknowingly drop a $20 bill. You’d have to run to return it, but you could really use the money yourself... What will you do?",
       "choices": [
         {
-          "text": "🍔 Buy them a warm meal",
-          "compassionChange": 15,
+          "text": "Run to catch up to them, even if it makes you late for class",
+          "nextScenarioId": 1,
+          "verse": "Proverbs 19:1",
+          "compassion": 15
+        },
+        {
+          "text": "Call out to them. If they don’t hear you, keep the money.",
           "nextScenarioId": 2,
-          "verse": "Romans 15:2 - 'Carry each other’s burdens.'"
+          "verse": "Romans 12:17",
+          "compassion": 5
         },
         {
-          "text": "🏃‍♂️👟💨 Walk away quietly",
-          "compassionChange": -5,
+          "text": "Keep the money. They don’t even realize they've lost it.",
           "nextScenarioId": 3,
-          "verse": "1 John 3:17 - 'If anyone has material possessions and sees a brother in need but has no pity...'"
+          "verse": "Proverbs 20:14",
+          "compassion": -10
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "description": "The person you helped thanks you gratefully, and invites you to church. You’re exhausted from exams, but she seems lonely. What do you do?",
+      "choices": [
+        {
+          "text": "Attend to support her",
+          "nextScenarioId": 4,
+          "verse": "Galatians 6:2",
+          "compassion": 15,
+          "outcome": "You meet Pastor John and the church community."
         },
         {
-          "text": "🤣😂🗣 Mock their situation",
-          "compassionChange": -20,
-          "nextScenarioId": 4,
-          "verse": "Proverbs 14:21 - 'Whoever despises his neighbor is a sinner.'"
+          "text": "Politely decline to study",
+          "nextScenarioId": 5,
+          "verse": "Matthew 11:28",
+          "compassion": -5,
+          "outcome": "Sarah seems disappointed but understands."
         }
       ]
     },
     {
       "id": 2,
-      "description": "The person thanks you tearfully. Later, you’re short on rent. A friend offers loan shark contacts. What now?",
+      "description": "You keep the $20 but feel uneasy. Later, you decide to go to your local coffee shop, and you see the same person, they appear to be short by a dollar. What do you do?",
       "choices": [
         {
-          "text": "Decline and trust God",
-          "compassionChange": 10,
-          "nextScenarioId": 5,
-          "verse": "Matthew 6:26 - 'Look at the birds of the air... your Heavenly Father feeds them.'"
+          "text": "Give them $20 you picked up earlier",
+          "nextScenarioId": 6,
+          "verse": "Romans 12:15",
+          "compassion": 20
         },
         {
-          "text": "Accept the shady loan",
-          "compassionChange": -15,
-          "nextScenarioId": 4,
-          "verse": "Proverbs 22:7 - 'The borrower is slave to the lender.'"
+          "text": "'They're only short by a dollar... I'll just give them 1'",
+          "nextScenarioId": 7,
+          "verse": "Proverbs 21:13",
+          "compassion": -20
         }
       ]
     },
     {
       "id": 3,
-      "description": "You walk away but feel uneasy. At church, someone asks for volunteers at a soup kitchen. How do you respond?",
+      "description": "You spend the $20 but feel guilty. Later, you see Sarah at a coffee shop. She looks upset. What do you do?",
       "choices": [
         {
-          "text": "Sign up immediately",
-          "compassionChange": 20,
-          "nextScenarioId": 5,
-          "verse": "Hebrews 13:16 - 'Do not neglect to do good and to share what you have.'"
+          "text": "Apologize and return the money",
+          "nextScenarioId": 8,
+          "verse": "Luke 19:8",
+          "compassion": 25,
+          "outcome": "Sarah forgives you and invites you to church."
         },
         {
-          "text": "Make an excuse",
-          "compassionChange": -10,
-          "nextScenarioId": 4,
-          "verse": "James 2:15-16 - 'If a brother is poorly clothed... what good is that?'"
+          "text": "Avoid her and leave quickly",
+          "nextScenarioId": 9,
+          "verse": "Proverbs 28:13",
+          "compassion": -15,
+          "outcome": "You feel increasingly isolated."
         }
       ]
     },
     {
       "id": 4,
-      "description": "You’ve been avoiding opportunities to serve. A coworker confides they’re suicidal. What do you do?",
+      "description": "At church, Pastor John asks for volunteers to help at a homeless shelter. You’re already stretched thin, but the need is great.",
       "choices": [
         {
-          "text": "Listen and pray with them",
-          "compassionChange": 25,
-          "nextScenarioId": 5,
-          "verse": "Galatians 6:2 - 'Carry each other’s burdens.'"
+          "text": "Sign up immediately",
+          "nextScenarioId": 10,
+          "verse": "Matthew 25:40",
+          "compassion": 20,
+          "outcome": "You meet Michael, a man struggling with addiction."
         },
         {
-          "text": "Tell them you’re busy",
-          "compassionChange": -30,
-          "nextScenarioId": 6,
-          "verse": "Proverbs 24:11 - 'Rescue those being led away to death.'"
+          "text": "Say you’ll think about it",
+          "nextScenarioId": 11,
+          "verse": "James 4:17",
+          "compassion": -10,
+          "outcome": "You feel a sense of missed opportunity."
         }
       ]
     },
     {
       "id": 5,
-      "description": "Your compassion has grown! A persecuted believer asks you to hide them. Do you risk your safety?",
+      "description": "You skip church to study but feel uneasy. Sarah texts you later, asking if you’d like to join a Bible study group.",
       "choices": [
         {
-          "text": "Take them in",
-          "compassionChange": 40,
-          "nextScenarioId": null,
-          "verse": "Matthew 25:35 - 'I was a stranger and you invited me in.'"
+          "text": "Agree to join",
+          "nextScenarioId": 12,
+          "verse": "Hebrews 10:25",
+          "compassion": 15,
+          "outcome": "You reconnect with Sarah and the church."
         },
         {
-          "text": "Report them to authorities",
-          "compassionChange": -50,
-          "nextScenarioId": null,
-          "verse": "John 15:13 - 'Greater love has no one than this: to lay down one’s life for friends.'"
+          "text": "Decline and focus on your studies",
+          "nextScenarioId": 13,
+          "verse": "Proverbs 24:33-34",
+          "compassion": -5,
+          "outcome": "You feel increasingly disconnected."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "description": "Sarah opens up about her struggles. She asks if you’d pray with her. What do you do?",
+      "choices": [
+        {
+          "text": "Pray with her and offer support",
+          "nextScenarioId": 14,
+          "verse": "James 5:16",
+          "compassion": 25,
+          "outcome": "Sarah’s faith begins to strengthen."
+        },
+        {
+          "text": "Say you’re not comfortable praying",
+          "nextScenarioId": 15,
+          "verse": "Matthew 6:7",
+          "compassion": -10,
+          "outcome": "Sarah seems hurt but understands."
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "description": "You ignore Sarah, but her face haunts your thoughts. A friend suggests you pray about it. What do you do?",
+      "choices": [
+        {
+          "text": "Pray and seek guidance",
+          "nextScenarioId": 16,
+          "verse": "Philippians 4:6",
+          "compassion": 15,
+          "outcome": "You feel a sense of peace and clarity."
+        },
+        {
+          "text": "Ignore the guilt and move on",
+          "nextScenarioId": 17,
+          "verse": "Proverbs 28:13",
+          "compassion": -20,
+          "outcome": "You feel increasingly isolated."
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "description": "Sarah forgives you and invites you to church. You’re hesitant but feel a sense of relief. What do you do?",
+      "choices": [
+        {
+          "text": "Accept her invitation",
+          "nextScenarioId": 4,
+          "verse": "Hebrews 10:25",
+          "compassion": 20,
+          "outcome": "You reconnect with the church community."
+        },
+        {
+          "text": "Decline but promise to stay in touch",
+          "nextScenarioId": 18,
+          "verse": "Proverbs 3:5-6",
+          "compassion": 10,
+          "outcome": "You feel a sense of unresolved tension."
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "description": "You avoid Sarah, but the guilt lingers. A classmate invites you to a party to distract yourself. What do you do?",
+      "choices": [
+        {
+          "text": "Go to the party",
+          "nextScenarioId": 19,
+          "verse": "1 Corinthians 10:31",
+          "compassion": -10,
+          "outcome": "You feel temporarily distracted but empty."
+        },
+        {
+          "text": "Stay home and reflect on your choices",
+          "nextScenarioId": 20,
+          "verse": "Psalm 46:10",
+          "compassion": 10,
+          "outcome": "You feel a sense of conviction."
         }
       ]
     }
@@ -100,22 +206,28 @@
 
   "endings": [
     {
-      "minCompassion": 80,
-      "title": "Faithful Servant",
-      "message": "'Well done, good and faithful servant!' (Matthew 25:23)",
+      "minCompassion": 90,
+      "title": "Full of Grace",
+      "message": "Your heart mirrors Christ’s love—sacrificial, relentless, and transformative.",
       "verse": "2 Corinthians 5:14 - 'For Christ’s love compels us...'"
     },
     {
-      "minCompassion": 40,
-      "title": "Growing Disciple",
-      "message": "'Press on toward the goal!' (Philippians 3:14)",
+      "minCompassion": 70,
+      "title": "Growing In Love",
+      "message": "You care deeply but sometimes hesitate. Keep seeking His kingdom first!",
+      "verse": "1 John 4:19 - 'We love because He first loved us.'"
+    },
+    {
+      "minCompassion": 50,
+      "title": "Seeking Light",
+      "message": "You're on the path but need courage to surrender fully. His grace is enough!",
       "verse": "1 John 4:19 - 'We love because He first loved us.'"
     },
     {
       "minCompassion": 0,
       "title": "Broken Vessel",
-      "message": "'Return to me, and I will restore you.' (Jeremiah 15:19)",
-      "verse": "Lamentations 3:22-23 - 'His mercies are new every morning.'"
+      "message": "You’re on the path but need courage to surrender fully. His grace is enough!",
+      "verse": "'Return to me, and I will restore you.' (Jeremiah 15:19)"
     }
   ]
 }

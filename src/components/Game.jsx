@@ -1,22 +1,34 @@
 import React, { useEffect, useState } from "react";
 import scenariosData from "../data/scenarios.json";
 import BackgroundMood from "./weather/BackgroundMood";
+import FeedbackMessage from "./weather/FeedbackMessage";
+import Plant from "./Plant";
 
 const { scenarios, endings } = scenariosData;
+const compassionIncrease = {
+  cloudy: {
+    message: "The sky brightens as your heart aligns with His love...",
+    verse: "Persevere—Galatians 6:9",
+  },
+  sunny: {
+    message: "The sky brightens as your heart aligns with His love...",
+    verse: "Persevere—Galatians 6:9",
+  },
+};
 
 const Game = () => {
-  const [state, setState] = useState({ compassion: 15, scenarioId: 1 });
+  const [state, setState] = useState({ scenarioId: 0, compassion: 20 });
   const [selectedChoice, setSelectedChoice] = useState(null);
+  const [feedbackMessage, setFeedbackMessage] = useState(null);
 
   const scenario = scenarios.find((s) => s.id === state.scenarioId);
 
   const handleChoice = (choice) => {
     if (selectedChoice != null) return;
-
-    const newCompassion = state.compassion + choice.compassionChange;
+    const compassionChange = Math.max(0, state.compassion + choice.compassion);
     setState({
       ...state,
-      compassion: Math.max(0, Math.min(100, newCompassion)),
+      compassion: compassionChange,
     });
     setSelectedChoice(choice);
   };
@@ -28,10 +40,11 @@ const Game = () => {
 
   let weather = "sunny";
   if (state.compassion < 30) weather = "rain";
-  else if (state.compassion < 80) weather = "cloudy";
+  else if (state.compassion < 100) weather = "cloudy";
 
   useEffect(() => {
     document.body.className = weather;
+    setFeedbackMessage(compassionIncrease[weather]);
   }, [weather]);
 
   if (!scenario) {
@@ -56,6 +69,13 @@ const Game = () => {
   return (
     <>
       <div className="container">
+        {feedbackMessage && (
+          <FeedbackMessage
+            verse={feedbackMessage.verse}
+            message={feedbackMessage.message}
+          />
+        )}
+
         <div className="game-container">
           <div className="compassion-info">
             <span>Compassion Meter: {state.compassion}</span>
@@ -66,11 +86,12 @@ const Game = () => {
               />
             </div>
           </div>
+
           <div className="scenario">
             <p className="scenario-description">{scenario.description}</p>
             <div className="choices">
-              {scenario.choices.map((choice, index) => (
-                <div key={`choice-${index}`}>
+              {scenario.choices.map((choice) => (
+                <div key={`${choice.text}`}>
                   <button
                     onClick={() => handleChoice(choice)}
                     className="choice-btn"
@@ -86,6 +107,7 @@ const Game = () => {
                 </div>
               ))}
             </div>
+
             {selectedChoice && (
               <div>
                 <button onClick={handleContinue} className="continue-btn">
