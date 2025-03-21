@@ -1,25 +1,14 @@
 import React, { useEffect, useState } from "react";
 import scenariosData from "../data/scenarios.json";
 import BackgroundMood from "./weather/BackgroundMood";
-import FeedbackMessage from "./weather/FeedbackMessage";
+import FeedbackMessage from "./weather/helper/FeedbackMessage";
 import Plant from "./Plant";
 
 const { scenarios, endings } = scenariosData;
-const compassionIncrease = {
-  cloudy: {
-    message: "The sky brightens as your heart aligns with His love...",
-    verse: "Persevere—Galatians 6:9",
-  },
-  sunny: {
-    message: "The sky brightens as your heart aligns with His love...",
-    verse: "Persevere—Galatians 6:9",
-  },
-};
 
 const Game = () => {
   const [state, setState] = useState({ scenarioId: 0, compassion: 20 });
   const [selectedChoice, setSelectedChoice] = useState(null);
-  const [feedbackMessage, setFeedbackMessage] = useState(null);
 
   const scenario = scenarios.find((s) => s.id === state.scenarioId);
 
@@ -40,11 +29,10 @@ const Game = () => {
 
   let weather = "sunny";
   if (state.compassion < 30) weather = "rain";
-  else if (state.compassion < 100) weather = "cloudy";
+  else if (state.compassion < 60) weather = "cloudy";
 
   useEffect(() => {
     document.body.className = weather;
-    setFeedbackMessage(compassionIncrease[weather]);
   }, [weather]);
 
   if (!scenario) {
@@ -69,12 +57,7 @@ const Game = () => {
   return (
     <>
       <div className="container">
-        {feedbackMessage && (
-          <FeedbackMessage
-            verse={feedbackMessage.verse}
-            message={feedbackMessage.message}
-          />
-        )}
+        <FeedbackMessage weather={weather} key={weather} />
 
         <div className="game-container">
           <div className="compassion-info">
