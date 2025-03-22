@@ -101,6 +101,7 @@ const Game = () => {
           </div>
         </div>
       </div>
+      <Plant compassion={state.compassion} />
       <BackgroundMood weather={weather} />
     </>
   );

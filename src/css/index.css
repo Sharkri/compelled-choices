@@ -34,9 +34,9 @@ body {
   font-family: Arial, sans-serif;
   max-width: 600px;
   margin: 0px auto;
-  transition: --sky-color1 3s ease-in-out, --sky-color2 3s ease-in-out,
-    opacity 2s ease-in-out, color 1s ease-in-out, background 3s,
-    filter 3s ease-in-out;
+  transition: --sky-color1 3s cubic-bezier(0.5, 0, 0.5, 1),
+    --sky-color2 3s cubic-bezier(0.5, 0, 0.5, 1), opacity 2s ease-in-out,
+    color 1s ease-in-out, background 3s, filter 3s ease-in-out;
   background: linear-gradient(to bottom, var(--sky-color1), var(--sky-color2));
 }
 
