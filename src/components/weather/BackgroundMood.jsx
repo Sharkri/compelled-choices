@@ -4,6 +4,7 @@ import rainSound from "/src/assets/rain.mp3";
 import ReactHowler from "react-howler";
 import Rain from "./helper/Rain";
 import SunnyWeather from "./SunnyWeather";
+import cloud1 from "/src/assets/cloud-1.png";
 
 const BackgroundMood = ({ weather }) => {
   const cloudData = [
@@ -25,7 +26,7 @@ const BackgroundMood = ({ weather }) => {
             top: `${top}%`,
           }}
         >
-          <img src="src/assets/cloud-1.png" className="cloud-img" />
+          <img src={cloud1} className="cloud-img" />
           <Rain />
         </div>
       ))}
