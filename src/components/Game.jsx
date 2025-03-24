@@ -3,6 +3,7 @@ import scenariosData from "../data/scenarios.json";
 import BackgroundMood from "./weather/BackgroundMood";
 import FeedbackMessage from "./weather/helper/FeedbackMessage";
 import Plant from "./Plant";
+import EndingScreen from "./EndingScreen";
 
 const { scenarios, endings } = scenariosData;
 
@@ -35,72 +36,59 @@ const Game = () => {
     document.body.className = weather;
   }, [weather]);
 
-  if (!scenario) {
-    const ending = endings.find((e) => state.compassion >= e.minCompassion);
-
-    return (
-      <div className="ending-screen">
-        <h2>{ending.title}</h2>
-        <p>{ending.message}</p>
-        <blockquote>{ending.verse}</blockquote>
-        <div className="compel-wrapper">
-          <label for="compel">What will Christ compel you to do?</label>
-          <textarea
-            placeholder="He inspires me to spread love and forgiveness in my community."
-            id="compel"
-          />
-        </div>
-      </div>
-    );
-  }
+  const ending = endings.find((e) => state.compassion >= e.minCompassion);
 
   return (
     <>
-      <div className="container">
-        <FeedbackMessage weather={weather} key={weather} />
+      {scenario ? (
+        <div className="container">
+          <FeedbackMessage weather={weather} key={weather} />
 
-        <div className="game-container">
-          <div className="compassion-info">
-            <span>Compassion Meter: {state.compassion}</span>
-            <div className="compassion-meter">
-              <div
-                className="compassion-fill"
-                style={{ width: `${state.compassion}%` }}
-              />
-            </div>
-          </div>
-
-          <div className="scenario">
-            <p className="scenario-description">{scenario.description}</p>
-            <div className="choices">
-              {scenario.choices.map((choice) => (
-                <div key={`${choice.text}`}>
-                  <button
-                    onClick={() => handleChoice(choice)}
-                    className="choice-btn"
-                    disabled={
-                      selectedChoice && selectedChoice?.text !== choice.text
-                    }
-                  >
-                    {choice.text}
-                  </button>
-                  {selectedChoice?.text === choice.text && (
-                    <blockquote>{selectedChoice.verse}</blockquote>
-                  )}
-                </div>
-              ))}
-            </div>
-
-            {selectedChoice && (
-              <div>
-                <button onClick={handleContinue} className="continue-btn">
-                  Continue
-                </button>
+          <div className="game-container">
+            <div className="compassion-info">
+              <span>Compassion Meter: {state.compassion}</span>
+              <div className="compassion-meter">
+                <div
+                  className="compassion-fill"
+                  style={{ width: `${state.compassion}%` }}
+                />
               </div>
-            )}
+            </div>
+
+            <div className="scenario">
+              <p className="scenario-description">{scenario.description}</p>
+              <div className="choices">
+                {scenario.choices.map((choice) => (
+                  <div key={`${choice.text}`}>
+                    <button
+                      onClick={() => handleChoice(choice)}
+                      className="choice-btn"
+                      disabled={
+                        selectedChoice && selectedChoice?.text !== choice.text
+                      }
+                    >
+                      {choice.text}
+                    </button>
+                    {selectedChoice?.text === choice.text && (
+                      <blockquote>{selectedChoice.verse}</blockquote>
+                    )}
+                  </div>
+                ))}
+              </div>
+
+              {selectedChoice && (
+                <div>
+                  <button onClick={handleContinue} className="continue-btn">
+                    Continue
+                  </button>
+                </div>
+              )}
+            </div>
           </div>
         </div>
-      </div>
+      ) : (
+        <EndingScreen ending={ending} />
+      )}
       <Plant compassion={state.compassion} />
       <BackgroundMood weather={weather} />
     </>
