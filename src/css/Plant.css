@@ -8,14 +8,14 @@
   position: absolute;
   width: 80px;
   height: 80px;
-  transform: translate(-50%, 0); /* Center horizontally */
+  transform: translate(-50%, -50%); /* Center horizontally */
 }
 
 .plant {
   position: absolute;
   transition: all 1s ease;
   transform: scale(0.8);
-  filter: blur(3px);
+  filter: blur(2px);
 }
 
 body.rain .plant {
