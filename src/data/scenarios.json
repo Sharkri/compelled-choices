@@ -7,198 +7,332 @@
         {
           "text": "Run to catch up to them, even if it makes you late for class",
           "nextScenarioId": 1,
-          "verse": "Proverbs 19:1",
+          "verse": "Proverbs 3:27 - 'Do not withhold good from those to whom it is due, when it is in your power to act.'",
           "compassion": 15
         },
         {
           "text": "Call out to them. If they don’t hear you, keep the money.",
           "nextScenarioId": 2,
-          "verse": "Romans 12:17",
-          "compassion": 5
+          "verse": "(They don't hear you..) Deuteronomy 22:1 - 'Do not ignore your fellow Israelite’s lost property. You must return it to them.'",
+          "compassion": 0
         },
         {
           "text": "Keep the money. They don’t even realize they've lost it.",
           "nextScenarioId": 3,
-          "verse": "Proverbs 20:14",
+          "verse": "Exodus 20:15 - 'You shall not steal.' (Even 'finding' what isn't yours can be a form of theft)",
           "compassion": -10
         }
       ]
     },
     {
       "id": 1,
-      "description": "The person you helped thanks you gratefully, and invites you to church. You’re exhausted from exams, but she seems lonely. What do you do?",
+      "description": "You notice a classmate being bullied at lunch. They're clearly distressed. What do you do?",
       "choices": [
         {
-          "text": "Attend to support her",
+          "text": "Confront the bullies and sit with the student",
           "nextScenarioId": 4,
-          "verse": "Galatians 6:2",
-          "compassion": 15,
-          "outcome": "You meet Pastor John and the church community."
+          "verse": "Proverbs 31:8-9 - 'Speak up for those who cannot speak for themselves... defend the rights of the poor and needy.'",
+          "compassion": 20
         },
         {
-          "text": "Politely decline to study",
+          "text": "Tell a teacher later if you remember",
           "nextScenarioId": 5,
-          "verse": "Matthew 11:28",
-          "compassion": -5,
-          "outcome": "Sarah seems disappointed but understands."
+          "verse": "James 4:17 - 'If anyone knows the right thing to do and fails to do it, it is sin.'",
+          "compassion": 0
+        },
+        {
+          "text": "Stay quiet - you don't want to become a target",
+          "nextScenarioId": 6,
+          "verse": "John 15:13 - 'Greater love has no one than this: to lay down one’s life for one’s friends.'",
+          "compassion": -15
         }
       ]
     },
     {
       "id": 2,
-      "description": "You keep the $20 but feel uneasy. Later, you decide to go to your local coffee shop, and you see the same person, they appear to be short by a dollar. What do you do?",
+      "description": "Your friend asks to copy your homework. You worked hard on it, but they're struggling...",
       "choices": [
         {
-          "text": "Give them $20 you picked up earlier",
-          "nextScenarioId": 6,
-          "verse": "Romans 12:15",
-          "compassion": 20
+          "text": "Refuse but offer to tutor them",
+          "nextScenarioId": 7,
+          "verse": "Galatians 6:2 - 'Carry each other’s burdens, and in this way you will fulfill the law of Christ.'",
+          "compassion": 10
         },
         {
-          "text": "'They're only short by a dollar... I'll just give them 1'",
-          "nextScenarioId": 7,
-          "verse": "Proverbs 21:13",
-          "compassion": -20
+          "text": "Let them copy your homework",
+          "nextScenarioId": 8,
+          "verse": "Proverbs 11:3 - 'The integrity of the upright guides them, but the unfaithful are destroyed by their duplicity.'",
+          "compassion": -5
+        },
+        {
+          "text": "Report them to the teacher",
+          "nextScenarioId": 9,
+          "verse": "Ephesians 4:15 - 'Speak the truth in love...'",
+          "compassion": 0
         }
       ]
     },
     {
       "id": 3,
-      "description": "You spend the $20 but feel guilty. Later, you see Sarah at a coffee shop. She looks upset. What do you do?",
+      "description": "An elderly neighbor needs help shoveling snow but you have plans with friends...",
       "choices": [
         {
-          "text": "Apologize and return the money",
-          "nextScenarioId": 8,
-          "verse": "Luke 19:8",
-          "compassion": 25,
-          "outcome": "Sarah forgives you and invites you to church."
+          "text": "Cancel plans and help joyfully",
+          "nextScenarioId": 10,
+          "verse": "Matthew 5:16 - 'Let your light shine before others, that they may see your good deeds and glorify your Father in heaven.'",
+          "compassion": 25
         },
         {
-          "text": "Avoid her and leave quickly",
-          "nextScenarioId": 9,
-          "verse": "Proverbs 28:13",
-          "compassion": -15,
-          "outcome": "You feel increasingly isolated."
+          "text": "Help briefly then leave",
+          "nextScenarioId": 11,
+          "verse": "Colossians 3:23 - 'Whatever you do, work at it with all your heart, as working for the Lord...'",
+          "compassion": 10
+        },
+        {
+          "text": "Pretend you didn't see them",
+          "nextScenarioId": 12,
+          "verse": "Luke 10:30-37 - The Good Samaritan parable ('Which of these three do you think was a neighbor...?')",
+          "compassion": -20
         }
       ]
     },
     {
       "id": 4,
-      "description": "At church, Pastor John asks for volunteers to help at a homeless shelter. You’re already stretched thin, but the need is great.",
+      "description": "A homeless man outside the grocery store asks for food. Your wallet is empty but you have your own lunch...",
       "choices": [
         {
-          "text": "Sign up immediately",
-          "nextScenarioId": 10,
-          "verse": "Matthew 25:40",
-          "compassion": 20,
-          "outcome": "You meet Michael, a man struggling with addiction."
+          "text": "Give him your sandwich and pray with him",
+          "nextScenarioId": 13,
+          "verse": "Matthew 25:35 - 'For I was hungry and you gave me something to eat... whatever you did for the least of these, you did for me.'",
+          "compassion": 30
         },
         {
-          "text": "Say you’ll think about it",
-          "nextScenarioId": 11,
-          "verse": "James 4:17",
-          "compassion": -10,
-          "outcome": "You feel a sense of missed opportunity."
+          "text": "Share half your food but keep walking",
+          "nextScenarioId": 14,
+          "verse": "Luke 3:11 - 'Anyone who has two shirts should share with the one who has none...'",
+          "compassion": 15
+        },
+        {
+          "text": "Avoid eye contact - you worked hard for that meal",
+          "nextScenarioId": 15,
+          "verse": "1 John 3:17 - 'If anyone has material possessions and sees a brother in need but has no pity, how can the love of God be in them?'",
+          "compassion": -25
         }
       ]
     },
     {
       "id": 5,
-      "description": "You skip church to study but feel uneasy. Sarah texts you later, asking if you’d like to join a Bible study group.",
+      "description": "You overhear friends spreading rumors about someone in your youth group. What's your response?",
       "choices": [
         {
-          "text": "Agree to join",
-          "nextScenarioId": 12,
-          "verse": "Hebrews 10:25",
-          "compassion": 15,
-          "outcome": "You reconnect with Sarah and the church."
+          "text": "Defend them publicly and confront the gossip",
+          "nextScenarioId": 16,
+          "verse": "Ephesians 4:29 - 'Do not let any unwholesome talk come out of your mouths, but only what helps build others up...'",
+          "compassion": 20
         },
         {
-          "text": "Decline and focus on your studies",
+          "text": "Change the subject but don't intervene",
+          "nextScenarioId": 17,
+          "verse": "Proverbs 26:20 - 'Without wood a fire goes out; without gossip a quarrel dies down.'",
+          "compassion": 5
+        },
+        {
+          "text": "Listen quietly but don't repeat it",
+          "nextScenarioId": 18,
+          "verse": "Leviticus 19:16 - 'Do not go about spreading slander among your people...'",
+          "compassion": -10
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "description": "A homeless man outside the grocery store asks for food. Your wallet is empty but you have your own lunch...",
+      "choices": [
+        {
+          "text": "Give him your sandwich and pray with him",
           "nextScenarioId": 13,
-          "verse": "Proverbs 24:33-34",
-          "compassion": -5,
-          "outcome": "You feel increasingly disconnected."
+          "verse": "Matthew 25:35 - 'For I was hungry and you gave me something to eat... whatever you did for the least of these, you did for me.'",
+          "compassion": 30
+        },
+        {
+          "text": "Share half your food but keep walking",
+          "nextScenarioId": 14,
+          "verse": "Luke 3:11 - 'Anyone who has two shirts should share with the one who has none...'",
+          "compassion": 15
+        },
+        {
+          "text": "Avoid eye contact - you worked hard for that meal",
+          "nextScenarioId": 15,
+          "verse": "1 John 3:17 - 'If anyone has material possessions and sees a brother in need but has no pity, how can the love of God be in them?'",
+          "compassion": -25
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "description": "You overhear friends spreading rumors about someone in your youth group. What's your response?",
+      "choices": [
+        {
+          "text": "Defend them publicly and confront the gossip",
+          "nextScenarioId": 16,
+          "verse": "Ephesians 4:29 - 'Do not let any unwholesome talk come out of your mouths, but only what helps build others up...'",
+          "compassion": 20
+        },
+        {
+          "text": "Change the subject but don't intervene",
+          "nextScenarioId": 17,
+          "verse": "Proverbs 26:20 - 'Without wood a fire goes out; without gossip a quarrel dies down.'",
+          "compassion": 5
+        },
+        {
+          "text": "Listen quietly but don't repeat it",
+          "nextScenarioId": 18,
+          "verse": "Leviticus 19:16 - 'Do not go about spreading slander among your people...'",
+          "compassion": -10
         }
       ]
     },
     {
       "id": 6,
-      "description": "Sarah opens up about her struggles. She asks if you’d pray with her. What do you do?",
+      "description": "A new student from another country sits alone at chapel. They seem uncomfortable with the worship style...",
       "choices": [
         {
-          "text": "Pray with her and offer support",
-          "nextScenarioId": 14,
-          "verse": "James 5:16",
-          "compassion": 25,
-          "outcome": "Sarah’s faith begins to strengthen."
-        },
-        {
-          "text": "Say you’re not comfortable praying",
-          "nextScenarioId": 15,
-          "verse": "Matthew 6:7",
-          "compassion": -10,
-          "outcome": "Sarah seems hurt but understands."
-        }
-      ]
-    },
-    {
-      "id": 7,
-      "description": "You ignore Sarah, but her face haunts your thoughts. A friend suggests you pray about it. What do you do?",
-      "choices": [
-        {
-          "text": "Pray and seek guidance",
-          "nextScenarioId": 16,
-          "verse": "Philippians 4:6",
-          "compassion": 15,
-          "outcome": "You feel a sense of peace and clarity."
-        },
-        {
-          "text": "Ignore the guilt and move on",
-          "nextScenarioId": 17,
-          "verse": "Proverbs 28:13",
-          "compassion": -20,
-          "outcome": "You feel increasingly isolated."
-        }
-      ]
-    },
-    {
-      "id": 8,
-      "description": "Sarah forgives you and invites you to church. You’re hesitant but feel a sense of relief. What do you do?",
-      "choices": [
-        {
-          "text": "Accept her invitation",
-          "nextScenarioId": 4,
-          "verse": "Hebrews 10:25",
-          "compassion": 20,
-          "outcome": "You reconnect with the church community."
-        },
-        {
-          "text": "Decline but promise to stay in touch",
-          "nextScenarioId": 18,
-          "verse": "Proverbs 3:5-6",
-          "compassion": 10,
-          "outcome": "You feel a sense of unresolved tension."
-        }
-      ]
-    },
-    {
-      "id": 9,
-      "description": "You avoid Sarah, but the guilt lingers. A classmate invites you to a party to distract yourself. What do you do?",
-      "choices": [
-        {
-          "text": "Go to the party",
+          "text": "Sit with them and explain what's happening",
           "nextScenarioId": 19,
-          "verse": "1 Corinthians 10:31",
-          "compassion": -10,
-          "outcome": "You feel temporarily distracted but empty."
+          "verse": "Romans 15:7 - 'Accept one another, then, just as Christ accepted you...'",
+          "compassion": 25
         },
         {
-          "text": "Stay home and reflect on your choices",
+          "text": "Smile but stay with your friend group",
           "nextScenarioId": 20,
-          "verse": "Psalm 46:10",
-          "compassion": 10,
-          "outcome": "You feel a sense of conviction."
+          "verse": "James 2:1 - 'Believers in glorious Lord Jesus Christ must not show favoritism.'",
+          "compassion": 0
+        },
+        {
+          "text": "Assume they want space and do nothing",
+          "nextScenarioId": 21,
+          "verse": "Hebrews 13:2 - 'Do not forget to show hospitality to strangers...'",
+          "compassion": -15
+        },
+        {
+          "id": 7,
+          "description": "Your church is debating whether to host refugees. Some members fear it might risk safety... What do you advocate?",
+          "choices": [
+            {
+              "text": "Push to welcome them wholeheartedly",
+              "nextScenarioId": 22,
+              "verse": "Leviticus 19:34 - 'The foreigner residing among you must be treated as your native-born. Love them as yourself...'",
+              "compassion": 30
+            },
+            {
+              "text": "Suggest limited support through donations",
+              "nextScenarioId": 23,
+              "verse": "James 2:15-16 - 'Suppose a brother or sister is without clothes and daily food. If you say, ‘Go in peace...’ but do nothing...'",
+              "compassion": 10
+            },
+            {
+              "text": "Vote against - 'We should help our own first'",
+              "nextScenarioId": 24,
+              "verse": "Matthew 25:40 - 'Truly I tell you, whatever you did for the least of these... you did for me.'",
+              "compassion": -20
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "description": "You accidentally break a museum exhibit. No one saw. The repair cost would empty your savings...",
+          "choices": [
+            {
+              "text": "Confess immediately and offer payment",
+              "nextScenarioId": 25,
+              "verse": "Numbers 5:7 - 'They must confess their sin and make full restitution...' + Luke 19:8 (Zacchaeus)",
+              "compassion": 20
+            },
+            {
+              "text": "Leave anonymously with cash",
+              "nextScenarioId": 26,
+              "verse": "Proverbs 28:13 - 'Whoever conceals their sins does not prosper, but the one who confesses finds mercy.'",
+              "compassion": -10
+            },
+            {
+              "text": "Blame someone else if questioned",
+              "nextScenarioId": 27,
+              "verse": "Colossians 3:9 - 'Do not lie to each other, since you have taken off your old self with its practices...'",
+              "compassion": -30
+            }
+          ]
+        },
+        {
+          "id": 9,
+          "description": "A friend considering abortion asks your opinion. She's terrified but you believe life begins at conception...",
+          "choices": [
+            {
+              "text": "Offer to adopt the baby",
+              "nextScenarioId": 28,
+              "verse": "Psalm 139:13-14 - 'You knit me together in my mother’s womb...' + Practical James 2:16",
+              "compassion": 40
+            },
+            {
+              "text": "Share your view but respect her choice",
+              "nextScenarioId": 29,
+              "verse": "Proverbs 31:8 - 'Speak up for those who cannot speak for themselves...'",
+              "compassion": 15
+            },
+            {
+              "text": "Avoid involvement - 'Not my business'",
+              "nextScenarioId": 30,
+              "verse": "Ezekiel 33:6 - 'If the watchman sees danger coming and doesn’t warn... I will hold accountable.'",
+              "compassion": -25
+            }
+          ]
+        },
+        {
+          "id": 10,
+          "description": "You discover your purchased clothes were made in sweatshops. Returning them would leave you with little to wear...",
+          "choices": [
+            {
+              "text": "Return everything and research ethical brands",
+              "nextScenarioId": 31,
+              "verse": "Amos 8:4-6 - 'Hear this, you who trample the needy...' + 1 Corinthians 10:24",
+              "compassion": 25
+            },
+            {
+              "text": "Keep items but boycott the brand",
+              "nextScenarioId": 32,
+              "verse": "Micah 6:8 - 'Act justly, love mercy, walk humbly...'",
+              "compassion": 10
+            },
+            {
+              "text": "Rationalize - 'My choice won't change anything'",
+              "nextScenarioId": 33,
+              "verse": "Luke 16:10 - 'Whoever is faithful with little will be faithful with much...'",
+              "compassion": -15
+            }
+          ]
+        },
+        {
+          "id": 11,
+          "description": "Your wealthy uncle offers a lucrative job that would require working Sundays. Your church needs you...",
+          "choices": [
+            {
+              "text": "Decline - 'I honor Sabbath rest'",
+              "nextScenarioId": 34,
+              "verse": "Exodus 20:8-10 - 'Remember the Sabbath...' + Mark 2:27 ('Sabbath made for man')",
+              "compassion": 20
+            },
+            {
+              "text": "Negotiate partial Sundays off",
+              "nextScenarioId": 35,
+              "verse": "Matthew 6:24 - 'No one can serve two masters...'",
+              "compassion": 5
+            },
+            {
+              "text": "Accept - 'Money helps more people'",
+              "nextScenarioId": 36,
+              "verse": "1 Timothy 6:10 - 'Love of money is root of all evil...'",
+              "compassion": -20
+            }
+          ]
         }
       ]
     }
