@@ -40,8 +40,15 @@ body {
   animation: startAnimation 3s forwards;
 }
 
+body.initial {
+}
+
 body:not(.initial) {
-  background: linear-gradient(to bottom, var(--sky-color1), var(--sky-color2));
+  background: linear-gradient(
+    to bottom,
+    var(--sky-color1),
+    var(--sky-color2)
+  ) !important;
 }
 
 /* Ground area */
