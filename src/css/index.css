@@ -36,8 +36,8 @@ body {
   margin: 0px auto;
   transition: --sky-color1 3s cubic-bezier(0.5, 0, 0.5, 1),
     --sky-color2 3s cubic-bezier(0.5, 0, 0.5, 1), opacity 3s ease-in-out,
-    color 1s ease-in-out, background 3s, filter 3s ease-in-out;
-  background-color: white;
+    color 1s ease-in-out, filter 3s ease-in-out;
+  animation: startAnimation 3s forwards;
 }
 
 body:not(.initial) {
@@ -100,10 +100,15 @@ blockquote {
   height: 100%;
 }
 
-body.initial {
-  background: #1a1a1a;
-}
-
 button {
   cursor: pointer;
+}
+
+@keyframes startAnimation {
+  from {
+    background: white;
+  }
+  to {
+    background: #1a1a1a;
+  }
 }
