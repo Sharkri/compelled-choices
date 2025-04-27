@@ -213,126 +213,126 @@
           "nextScenarioId": 21,
           "verse": "Hebrews 13:2 - 'Do not forget to show hospitality to strangers...'",
           "compassion": -15
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "description": "Your church is debating whether to host refugees. Some members fear it might risk safety... What do you advocate?",
+      "choices": [
+        {
+          "text": "Push to welcome them wholeheartedly",
+          "nextScenarioId": 22,
+          "verse": "Leviticus 19:34 - 'The foreigner residing among you must be treated as your native-born. Love them as yourself...'",
+          "compassion": 30
         },
         {
-          "id": 7,
-          "description": "Your church is debating whether to host refugees. Some members fear it might risk safety... What do you advocate?",
-          "choices": [
-            {
-              "text": "Push to welcome them wholeheartedly",
-              "nextScenarioId": 22,
-              "verse": "Leviticus 19:34 - 'The foreigner residing among you must be treated as your native-born. Love them as yourself...'",
-              "compassion": 30
-            },
-            {
-              "text": "Suggest limited support through donations",
-              "nextScenarioId": 23,
-              "verse": "James 2:15-16 - 'Suppose a brother or sister is without clothes and daily food. If you say, ‘Go in peace...’ but do nothing...'",
-              "compassion": 10
-            },
-            {
-              "text": "Vote against - 'We should help our own first'",
-              "nextScenarioId": 24,
-              "verse": "Matthew 25:40 - 'Truly I tell you, whatever you did for the least of these... you did for me.'",
-              "compassion": -20
-            }
-          ]
+          "text": "Suggest limited support through donations",
+          "nextScenarioId": 23,
+          "verse": "James 2:15-16 - 'Suppose a brother or sister is without clothes and daily food. If you say, ‘Go in peace...’ but do nothing...'",
+          "compassion": 10
         },
         {
-          "id": 8,
-          "description": "You accidentally break a museum exhibit. No one saw. The repair cost would empty your savings...",
-          "choices": [
-            {
-              "text": "Confess immediately and offer payment",
-              "nextScenarioId": 25,
-              "verse": "Numbers 5:7 - 'They must confess their sin and make full restitution...' + Luke 19:8 (Zacchaeus)",
-              "compassion": 20
-            },
-            {
-              "text": "Leave anonymously with cash",
-              "nextScenarioId": 26,
-              "verse": "Proverbs 28:13 - 'Whoever conceals their sins does not prosper, but the one who confesses finds mercy.'",
-              "compassion": -10
-            },
-            {
-              "text": "Blame someone else if questioned",
-              "nextScenarioId": 27,
-              "verse": "Colossians 3:9 - 'Do not lie to each other, since you have taken off your old self with its practices...'",
-              "compassion": -30
-            }
-          ]
+          "text": "Vote against - 'We should help our own first'",
+          "nextScenarioId": 24,
+          "verse": "Matthew 25:40 - 'Truly I tell you, whatever you did for the least of these... you did for me.'",
+          "compassion": -20
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "description": "You accidentally break a museum exhibit. No one saw. The repair cost would empty your savings...",
+      "choices": [
+        {
+          "text": "Confess immediately and offer payment",
+          "nextScenarioId": 25,
+          "verse": "Numbers 5:7 - 'They must confess their sin and make full restitution...' + Luke 19:8 (Zacchaeus)",
+          "compassion": 20
         },
         {
-          "id": 9,
-          "description": "A friend considering abortion asks your opinion. She's terrified but you believe life begins at conception...",
-          "choices": [
-            {
-              "text": "Offer to adopt the baby",
-              "nextScenarioId": 28,
-              "verse": "Psalm 139:13-14 - 'You knit me together in my mother’s womb...' + Practical James 2:16",
-              "compassion": 40
-            },
-            {
-              "text": "Share your view but respect her choice",
-              "nextScenarioId": 29,
-              "verse": "Proverbs 31:8 - 'Speak up for those who cannot speak for themselves...'",
-              "compassion": 15
-            },
-            {
-              "text": "Avoid involvement - 'Not my business'",
-              "nextScenarioId": 30,
-              "verse": "Ezekiel 33:6 - 'If the watchman sees danger coming and doesn’t warn... I will hold accountable.'",
-              "compassion": -25
-            }
-          ]
+          "text": "Leave anonymously with cash",
+          "nextScenarioId": 26,
+          "verse": "Proverbs 28:13 - 'Whoever conceals their sins does not prosper, but the one who confesses finds mercy.'",
+          "compassion": -10
         },
         {
-          "id": 10,
-          "description": "You discover your purchased clothes were made in sweatshops. Returning them would leave you with little to wear...",
-          "choices": [
-            {
-              "text": "Return everything and research ethical brands",
-              "nextScenarioId": 31,
-              "verse": "Amos 8:4-6 - 'Hear this, you who trample the needy...' + 1 Corinthians 10:24",
-              "compassion": 25
-            },
-            {
-              "text": "Keep items but boycott the brand",
-              "nextScenarioId": 32,
-              "verse": "Micah 6:8 - 'Act justly, love mercy, walk humbly...'",
-              "compassion": 10
-            },
-            {
-              "text": "Rationalize - 'My choice won't change anything'",
-              "nextScenarioId": 33,
-              "verse": "Luke 16:10 - 'Whoever is faithful with little will be faithful with much...'",
-              "compassion": -15
-            }
-          ]
+          "text": "Blame someone else if questioned",
+          "nextScenarioId": 27,
+          "verse": "Colossians 3:9 - 'Do not lie to each other, since you have taken off your old self with its practices...'",
+          "compassion": -30
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "description": "A friend considering abortion asks your opinion. She's terrified but you believe life begins at conception...",
+      "choices": [
+        {
+          "text": "Offer to adopt the baby",
+          "nextScenarioId": 28,
+          "verse": "Psalm 139:13-14 - 'You knit me together in my mother’s womb...' + Practical James 2:16",
+          "compassion": 40
         },
         {
-          "id": 11,
-          "description": "Your wealthy uncle offers a lucrative job that would require working Sundays. Your church needs you...",
-          "choices": [
-            {
-              "text": "Decline - 'I honor Sabbath rest'",
-              "nextScenarioId": 34,
-              "verse": "Exodus 20:8-10 - 'Remember the Sabbath...' + Mark 2:27 ('Sabbath made for man')",
-              "compassion": 20
-            },
-            {
-              "text": "Negotiate partial Sundays off",
-              "nextScenarioId": 35,
-              "verse": "Matthew 6:24 - 'No one can serve two masters...'",
-              "compassion": 5
-            },
-            {
-              "text": "Accept - 'Money helps more people'",
-              "nextScenarioId": 36,
-              "verse": "1 Timothy 6:10 - 'Love of money is root of all evil...'",
-              "compassion": -20
-            }
-          ]
+          "text": "Share your view but respect her choice",
+          "nextScenarioId": 29,
+          "verse": "Proverbs 31:8 - 'Speak up for those who cannot speak for themselves...'",
+          "compassion": 15
+        },
+        {
+          "text": "Avoid involvement - 'Not my business'",
+          "nextScenarioId": 30,
+          "verse": "Ezekiel 33:6 - 'If the watchman sees danger coming and doesn’t warn... I will hold accountable.'",
+          "compassion": -25
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "description": "You discover your purchased clothes were made in sweatshops. Returning them would leave you with little to wear...",
+      "choices": [
+        {
+          "text": "Return everything and research ethical brands",
+          "nextScenarioId": 31,
+          "verse": "Amos 8:4-6 - 'Hear this, you who trample the needy...' + 1 Corinthians 10:24",
+          "compassion": 25
+        },
+        {
+          "text": "Keep items but boycott the brand",
+          "nextScenarioId": 32,
+          "verse": "Micah 6:8 - 'Act justly, love mercy, walk humbly...'",
+          "compassion": 10
+        },
+        {
+          "text": "Rationalize - 'My choice won't change anything'",
+          "nextScenarioId": 33,
+          "verse": "Luke 16:10 - 'Whoever is faithful with little will be faithful with much...'",
+          "compassion": -15
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "description": "Your wealthy uncle offers a lucrative job that would require working Sundays. Your church needs you...",
+      "choices": [
+        {
+          "text": "Decline - 'I honor Sabbath rest'",
+          "nextScenarioId": 34,
+          "verse": "Exodus 20:8-10 - 'Remember the Sabbath...' + Mark 2:27 ('Sabbath made for man')",
+          "compassion": 20
+        },
+        {
+          "text": "Negotiate partial Sundays off",
+          "nextScenarioId": 35,
+          "verse": "Matthew 6:24 - 'No one can serve two masters...'",
+          "compassion": 5
+        },
+        {
+          "text": "Accept - 'Money helps more people'",
+          "nextScenarioId": 36,
+          "verse": "1 Timothy 6:10 - 'Love of money is root of all evil...'",
+          "compassion": -20
         }
       ]
     }

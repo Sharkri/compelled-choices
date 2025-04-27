@@ -40,21 +40,20 @@ const Game = () => {
 
   return (
     <>
+      <div className="compassion-info">
+        <span>Compassion Meter: {state.compassion}</span>
+        <div className="compassion-meter">
+          <div
+            className="compassion-fill"
+            style={{ width: `${state.compassion}%` }}
+          />
+        </div>
+      </div>
       {scenario ? (
         <div className="container">
           <FeedbackMessage weather={weather} key={weather} />
 
           <div className="game-container">
-            <div className="compassion-info">
-              <span>Compassion Meter: {state.compassion}</span>
-              <div className="compassion-meter">
-                <div
-                  className="compassion-fill"
-                  style={{ width: `${state.compassion}%` }}
-                />
-              </div>
-            </div>
-
             <div className="scenario">
               <p className="scenario-description">{scenario.description}</p>
               <div className="choices">
